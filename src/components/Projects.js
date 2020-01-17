@@ -1,9 +1,10 @@
-import React ,{useState} from 'react';
+import React , {useState} from 'react';
 import {useSelectedProjectValue,useProjectValue} from '../context';
-import {IndividualProject} from './individualProject'
+import {IndividualProject} from './individualProject';
+
 export const Projects = ({activeValue = null}) => {
     const [active , setActive] = useState(activeValue);
-    const {setSelectedProject} = useSelectedProjectValue();
+    const {setSelectedProjects} = useSelectedProjectValue();
     const {projects} = useProjectValue();
 
     return (
@@ -16,13 +17,9 @@ export const Projects = ({activeValue = null}) => {
                     active===project.projectId
                     ?'active sidebar__project':'sidebar__project'
                 }
-                onKeyDown={() => {
-                    setActive(project.projectId);
-                    setSelectedProject(project.projectId)
-                }}
                 onClick={() => {
                     setActive(project.projectId);
-                    setSelectedProject(project.projectId)
+                    setSelectedProjects(project.projectId)
                 }}>
                     <IndividualProject project={project}/>
                 </li>

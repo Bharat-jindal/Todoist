@@ -7,7 +7,7 @@ import {
 export {ProjectsContext,ProjectsProvider,useProjectValue}
 
 export {
-    useSelectedProjectValue,
     SelectedProjectsContext,
-    SelectedProjectsProvider
+    SelectedProjectsProvider,
+    useSelectedProjectValue,
 } from './selected-project-context'

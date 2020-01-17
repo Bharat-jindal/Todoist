@@ -16,17 +16,17 @@ export const useTasks = selectedProject => {
         unsubscribe = selectedProject && !collatedTasksExist(selectedProject) ? 
         (unsubscribe=unsubscribe.where('projectId','==',selectedProject))
         :selectedProject === 'TODAY' ?
-        (unsubscribe = unsubscribe.where('data','==',moment().format('DD/MM/YYYY')))
-        :selectedProject === 'INBOX || selectedProject' === 0
+        (unsubscribe = unsubscribe.where('date','==',moment().format('DD/MM/YYYY')))
+        :selectedProject === 'INBOX' || selectedProject === 0
         ?(unsubscribe = unsubscribe.where('date','==',''))
         :unsubscribe;
-
+        
         unsubscribe = unsubscribe.onSnapshot(snapshot => {
             const newTasks = snapshot.docs.map(task=>({
                 id: task.id,
                 ...task.data()
             }));
-
+            console.log('new tasks are',newTasks)
             setTasks(
                 selectedProject === 'NEXT_7'
                 ?newTasks.filter(

@@ -1,3 +1,8 @@
+
+  
+/* ==========================================================================
+   LETS BUILD TODOIST
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
 // General Settings
@@ -416,9 +421,10 @@ header {
 /* Show Confirm Delete
   ============================================ */
 .project-delete-modal {
-  position: relative;
+  position: absolute;
 
   &__inner {
+    
     @include box-overlay();
     z-index: 99;
     width: 200px;
@@ -714,4 +720,11 @@ header {
   &__cancel {
     @include cancel();
   }
+}
+
+.bharat_delete {
+  box-sizing: border-box;
+  position: relative;
+  width: calc(25vw);
+  left :-230px;
 }

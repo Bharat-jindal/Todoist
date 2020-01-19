@@ -18,7 +18,7 @@ export const Sidebar = () => {
                 setSelectedProjects('INBOX')
             }} >
             <span><FaInbox /></span>
-            <span>{'Inbox'}</span>
+            <span>Inbox</span>
         </li>
         <li 
             className={active==='today' ? 'active' : undefined}

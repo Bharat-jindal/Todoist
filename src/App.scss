@@ -261,6 +261,7 @@ header {
   overflow-y: hidden;
   border-right: $generic-border;
   background-color: #fafafa;
+  padding-left: 50px;
 
   @include mq('900px') {
     display: none;
@@ -385,6 +386,8 @@ header {
       font-size: 15px;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 8px;
+      padding-bottom: 8px;
 
       div:nth-child(1) {
         display: -webkit-box;
@@ -466,7 +469,7 @@ header {
 /* Tasks
   ============================================ */
 .tasks {
-  width: 656px;
+  width: 900px;
   background-color: white;
   margin-left: 266px;
   border-right: $generic-border;
@@ -647,7 +650,9 @@ header {
 
   &__list li {
     @include task-item();
-    padding: 0;
+    padding-left: 1.5vw;
+    padding-top: 8px;
+    padding-bottom: 8px;
 
     div:nth-child(1) {
       padding: 10px;
@@ -683,7 +688,9 @@ header {
 
   &__list li {
     @include task-item();
-    padding: 0;
+    padding-left: 3vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     div:nth-child(1) {
       width: 100%;

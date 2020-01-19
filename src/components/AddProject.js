@@ -47,7 +47,8 @@ export const AddProject =({shouldShow=false}) => {
                     <span
                         data-testid="hide-project-overlay"
                         className="add-project__cancel"
-                        onClick={()=>setShow(false)}>
+                        onClick={()=>setShow(false)}
+                        role="button">
                         Cancel
                     </span>
                 </div>
@@ -56,7 +57,8 @@ export const AddProject =({shouldShow=false}) => {
                 <span className="add-project__plus">+</span>
                 <span data-testid="add-project-action"
                     className="add-project__text"
-                    onClick={()=>setShow(!show)}>
+                    onClick={()=>setShow(!show)}
+                    role="button">
                         Add Project
                     </span>
         </div>

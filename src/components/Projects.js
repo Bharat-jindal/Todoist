@@ -16,12 +16,18 @@ export const Projects = ({activeValue = null}) => {
                 className={
                     active===project.projectId
                     ?'active sidebar__project':'sidebar__project'
-                }
-                onClick={() => {
-                    setActive(project.projectId);
-                    setSelectedProjects(project.projectId)
-                }}>
-                    <IndividualProject project={project}/>
+                }>
+                    <div role="button"
+                        onClick={() => {
+                            setActive(project.projectId);
+                            setSelectedProjects(project.projectId)
+                        }}
+                        onKeyDown={() => {
+                            setActive(project.projectId);
+                            setSelectedProjects(project.projectId)
+                        }}>
+                        <IndividualProject project={project}/>
+                    </div>
                 </li>
         ))
     )
